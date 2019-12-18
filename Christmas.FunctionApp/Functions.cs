@@ -26,7 +26,7 @@ namespace DataImport.FunctionApp
 
 
         [FunctionName("ServiceBusQueueTrigger")]
-        public static async Task ProcessWishes([ServiceBusTrigger("CustomerImport", Connection = "AzureServiceBusConnection")] string customerDataRaw,
+        public static async Task ProcessCustomer([ServiceBusTrigger("CustomerImport", Connection = "AzureServiceBusConnection")] string customerDataRaw,
             MessageReceiver messageReceiver,
             string lockToken,
             ILogger log)
