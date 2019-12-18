@@ -17,8 +17,10 @@ namespace DataImport.FunctionApp
         {
             log.LogInformation($"Recieved new customer file {fileName}");
 
+            // Bare minimum processing to separte out all data entites 
             var rows = BusinessLogic.ReadCustomerCsvFile(file);
 
+            // Send all entites to ServiceBus Queue to be picked up and processed  
             var sendTasks = rows.Select(async t => await t.ContinueWith(async s => queue.Add(await s)));
 
             Task.WaitAll(sendTasks.ToArray());
@@ -40,6 +42,7 @@ namespace DataImport.FunctionApp
             }
             catch (Exception e)
             {
+                // A failure to process a data entity will result in a dead-letter message
                 await messageReceiver.DeadLetterAsync(lockToken, $"Exception occurred during processing of customer: {e.ToString()}");
                 return;
             }
