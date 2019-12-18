@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29521.150
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Christmas.FunctionApp", "Christmas.FunctionApp\Christmas.FunctionApp.csproj", "{D718B4DF-2923-4753-90C4-093BA7BDEFDD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D718B4DF-2923-4753-90C4-093BA7BDEFDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D718B4DF-2923-4753-90C4-093BA7BDEFDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D718B4DF-2923-4753-90C4-093BA7BDEFDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D718B4DF-2923-4753-90C4-093BA7BDEFDD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1E364A51-74F7-4609-AE32-8F4E1232058D}
+	EndGlobalSection
+EndGlobal
